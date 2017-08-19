@@ -28,10 +28,15 @@ class ProfileFeedListEntry extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			commentText: ''
+			commentText: '',
+			profilePic: ''
 		}
 		this.handleCommentInput = this.handleCommentInput.bind(this);
 		this.submitComment = this.submitComment.bind(this);
+	}
+
+	componentDidMount() {
+
 	}
 
 	handleCommentInput(input) {

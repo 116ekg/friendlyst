@@ -59,10 +59,11 @@ class PhotoAlbumList extends Component {
   }
 
   closePhotoModal() {
-    this.setState({
+    let component = this
+    component.setState({
       showModal:false,
       newAlbumName: '',
-      albums: [ {name: this.state.newAlbumName, path: `${this.props.user.id}/${this.state.newAlbumName}`, photos: this.state.previewAlbum.slice()} ,...this.state.albums]
+      albums: [ {name: component.state.newAlbumName, path: `${component.props.user.id}/${component.state.newAlbumName}`, photos: component.state.previewAlbum.slice()} ,...component.state.albums]
     })
   }
 

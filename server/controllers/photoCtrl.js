@@ -31,10 +31,7 @@ module.exports = {
       Promise.all(cloudinaryPromises).then( (values) => {
         console.log(`promise all is ${JSON.stringify(values)}`)
       res.status(201).send(values)
+      })
     })
-
-    })
-
-      //
   })
 }
